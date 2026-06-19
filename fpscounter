@@ -1,0 +1,35 @@
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FPSCounter"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
+local frame = Instance.new("Frame")
+frame.Name = "CounterFrame"
+frame.Size = UDim2.new(0, 190, 0, 108)
+frame.Position = UDim2.new(0, 0, 0, 190) -- Góc trên trái, cách mép trên 190px
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
+local label = Instance.new("TextLabel")
+label.Name = "FPSText"
+label.Size = UDim2.new(1, 0, 1, 0)
+label.BackgroundTransparency = 1
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.Font = Enum.Font.SourceSansBold
+label.TextScaled = true
+label.Text = "FPS\n0"
+label.Parent = frame
+local frames = 0
+local lastUpdate = tick()
+RunService.RenderStepped:Connect(function()
+	frames += 1
+	local now = tick()
+	if now - lastUpdate >= 1 then
+		label.Text = string.format("FPS\n%d", frames)
+		frames = 0
+		lastUpdate = now
+	end
+end)
