@@ -2,7 +2,7 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
     getgenv().SettingFarm ={
         ["Multiple Attack"] = true,
         ["FPS Boost"] = true,
-        ["Hide UI"] = false,
+        ["Hide UI"] = true,
         ["Reset Teleport"] = {
             ["Enabled"] = false,
             ["Delay Reset"] = 3,
