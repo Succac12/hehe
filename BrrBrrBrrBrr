@@ -36,6 +36,7 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
             ["Auto Pull Lever"] = true,
             ["Dojo Trainer"] = true,
             ["Shark Anchor"] = true, --- if have cdk,sg,godhuman
+        },
         ["Auto Buy"] = {
             ["Buy All Sword"] = true,
             ["Buy All Gun"] = true,
