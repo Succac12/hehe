@@ -9,7 +9,7 @@ screenGui.ResetOnSpawn=false
 screenGui.Parent=playerGui
 local frame=Instance.new("Frame")
 frame.Size=UDim2.new(0,190,0,108)
-frame.Position=UDim2.new(0,0,0,250)
+frame.Position=UDim2.new(0,0,0,200)
 frame.BackgroundColor3=Color3.fromRGB(0,0,0)
 frame.BorderSizePixel=0
 frame.Parent=screenGui
@@ -58,18 +58,18 @@ pingValue.Parent=frame
 local frames=0
 local lastUpdate=tick()
 RunService.RenderStepped:Connect(function()
-	frames+=1
-	local now=tick()
-	if now-lastUpdate>=1 then
-		fpsValue.Text=tostring(frames)
-		local ok,ping=pcall(function()
-			return Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-		end)
-		if ok then
-			pingValue.Text=tostring(math.floor(ping+0.5))
-		end
-		frames=0
-		lastUpdate=now
-	end
+frames+=1
+local now=tick()
+if now-lastUpdate>=1 then
+fpsValue.Text=tostring(frames)
+local ok,ping=pcall(function()
+return Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+end)
+if ok then
+pingValue.Text=tostring(math.floor(ping+0.5))
+end
+frames=0
+lastUpdate=now
+end
 end)
 print("Skidded by pungtoi")
