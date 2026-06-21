@@ -28,7 +28,7 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
             ["Kabucha"] = true,
             ["Legendary Sword"] = true, 
             ["Godhuman"] = true,
-            ["Auto TTK"] = true,
+            ["True Triple Katana"] = true,
             ["Skull Guitar"] = true,
             ["Mirror Fractal"] = true,
             ["Cursed Dual Katana"] = true,
