@@ -36,6 +36,10 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
             ["Auto Pull Lever"] = true,
             ["Dojo Trainer"] = true,
             ["Shark Anchor"] = true, --- if have cdk,sg,godhuman
+        ["AUTO BUY"] = {
+            ["Buy All Sword"] = true,
+            ["Buy All Gun"] = true,
+            ["Sword Legendary"] = true,
         },
         ["Get Rare Items"] = {
             ["Auto Get Ghoul"] = true,
@@ -61,7 +65,7 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
             ["Hop Find Cake Queen [CDK]"] = true,
             ["Hop Find Soul Reaper [CDK]"] = true,
             ["Hop Find Darkbeard [SG]"] = true,
-            ["Hop Find Mirage [ Pull Lever ]"] = false,
+            ["Hop Find Mirage [ Pull Lever ]"] = true,
         },
         ["Farm Mastery"] = {
             ["Gun"] = true,
